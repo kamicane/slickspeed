@@ -16,18 +16,31 @@
 		function test(selector){
 			try {
 				var start = new Date().getTime();
-				var i = 1;
 				var elements = <?php echo $_GET['function']; ?>(selector);
-				i ++; <?php echo $_GET['function']; ?>(selector);
-				i ++; <?php echo $_GET['function']; ?>(selector);
-				i ++; <?php echo $_GET['function']; ?>(selector);
-				i ++; <?php echo $_GET['function']; ?>(selector);
-				i ++; <?php echo $_GET['function']; ?>(selector);
-				var end = ((new Date().getTime() - start) / i);
-				return {'time': Math.round(end), 'found': get_length(elements)};
+				<?php echo $_GET['function']; ?>(selector);
+				<?php echo $_GET['function']; ?>(selector);
+				<?php echo $_GET['function']; ?>(selector);
+				<?php echo $_GET['function']; ?>(selector);
+				<?php echo $_GET['function']; ?>(selector);
+				<?php echo $_GET['function']; ?>(selector);
+				<?php echo $_GET['function']; ?>(selector);
+				<?php echo $_GET['function']; ?>(selector);
+				<?php echo $_GET['function']; ?>(selector);
+				<?php echo $_GET['function']; ?>(selector);
+				<?php echo $_GET['function']; ?>(selector);
+				<?php echo $_GET['function']; ?>(selector);
+				<?php echo $_GET['function']; ?>(selector);
+				<?php echo $_GET['function']; ?>(selector);
+				<?php echo $_GET['function']; ?>(selector);
+				<?php echo $_GET['function']; ?>(selector);
+				<?php echo $_GET['function']; ?>(selector);
+				<?php echo $_GET['function']; ?>(selector);
+				<?php echo $_GET['function']; ?>(selector);
+				var end = ((new Date().getTime() - start));
+				return {'total time': Math.round(end), 'found': get_length(elements)};
 			} catch(err){
 				if (elements == undefined) elements = {length: -1};
-				return ({'time': (new Date().getTime() - start) / i, 'found': get_length(elements), 'error': err});
+				return ({'total time': (new Date().getTime() - start) / i, 'found': get_length(elements), 'error': err});
 			}
 
 		};
